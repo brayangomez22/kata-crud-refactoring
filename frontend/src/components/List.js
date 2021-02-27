@@ -20,11 +20,12 @@ const List = (params) => {
         swal.fire({
             title: "¡OJO!",
             text: "¿Estas seguro de eliminar este To-Do?",
-            icon: 'warning',
+            icon: 'info',
             showCancelButton: true,
             cancelButtonText: "Cancelar",
             confirmButtonText: "Sí, eliminar",
             confirmButtonColor: "#0a79df",
+            cancelButtonColor: "#dc2a2a"
         })
         .then(resultado => {
             if (resultado.value) {
@@ -41,11 +42,12 @@ const List = (params) => {
         swal.fire({
             title: "¡OJO!",
             text: "¿Estas seguro de editar este To-Do?",
-            icon: 'warning',
+            icon: 'info',
             showCancelButton: true,
             cancelButtonText: "Cancelar",
             confirmButtonText: "Sí, editar",
             confirmButtonColor: "#0a79df",
+            cancelButtonColor: "#dc2a2a"
         })
         .then(resultado => {
             if (resultado.value) {

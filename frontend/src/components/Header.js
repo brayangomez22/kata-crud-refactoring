@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  
+
 
 
 const Header = () => {
@@ -7,8 +7,7 @@ const Header = () => {
         <header>
             <span className="logo">To-Do List</span>
             <nav className="menu">
-                <Link to="/">Inicio</Link>
-                <Link to="/">Nosotros</Link>
+                <a target="blank" href="https://github.com/JacoboGarcesO/KATA_REFACTORIZANDO_CRUD">Repositorio</a>
             </nav>
         </header>
     );

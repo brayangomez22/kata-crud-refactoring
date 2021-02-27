@@ -22,7 +22,7 @@ public class TodoController {
         return service.save(todo);
     }
 
-    @PutMapping(path = "/todos")
+    @PutMapping(path = "/todo")
     public Todo update(@RequestBody Todo todo){
         if(todo.getId()!=null){
             return service.save(todo);

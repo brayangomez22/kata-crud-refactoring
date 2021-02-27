@@ -24,7 +24,8 @@ const Form = (params) => {
                     method: "POST",
                     body: JSON.stringify(request),
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                     }
                 })
                     .then(response => response.json())
@@ -68,7 +69,8 @@ const Form = (params) => {
                     method: "PUT",
                     body: JSON.stringify(request),
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                     }
                 })
                     .then(response => response.json())

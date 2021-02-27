@@ -110,6 +110,13 @@ main .container-img {
 	background: #5b4a9a;
 }
 
+.photo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+
 .todoList{
   position: relative;
   width: 100%;
@@ -271,7 +278,7 @@ tbody td {
 
 .edit:hover,
 .delete:hover{
-  transform: scale(1.1);
+  transform: scale(1.1); 
 }
 
 .ParticlesJS{

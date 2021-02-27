@@ -1,6 +1,7 @@
 package com.crud.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,17 +12,17 @@ public class TodoController {
     @Autowired
     private TodoService service;
 
-    @GetMapping(value = "/todos")
+    @GetMapping(path = "/todos")
     public Iterable<Todo> list(){
         return service.list();
     }
 
-    @PostMapping(value = "/todo")
+    @PostMapping(path = "/todo")
     public Todo save(@RequestBody Todo todo){
         return service.save(todo);
     }
 
-    @PutMapping(value = "/todo")
+    @PutMapping(path = "/todos")
     public Todo update(@RequestBody Todo todo){
         if(todo.getId()!=null){
             return service.save(todo);
@@ -29,12 +30,12 @@ public class TodoController {
         throw new RuntimeException("No existe el id para actualizar");
     }
 
-    @DeleteMapping(value = "/{id}/todo")
+    @DeleteMapping(path = "/{id}/todo")
     public void delete(@PathVariable("id") Long id){
         service.delete(id);
     }
 
-    @GetMapping(value = "/{id}/todo")
+    @GetMapping(path = "/{id}/todo")
     public Todo get(@PathVariable("id") Long id){
         return service.get(id);
     }

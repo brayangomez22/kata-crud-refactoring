@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+	font-weight: 400;
+  background-image: linear-gradient(-30deg, #f2f2f2 50%, #5b4a9a 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 5px 0px #333;
+}
+
+.container {
+	background-color: #fff;
+	width: 80vw;
+	margin: 40px auto;
+	padding: 40px;
+	border-radius: 10px;
+  box-shadow: 0px 10px 60px 0px #7e7e80;
+}
+
+header {
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.logo {
+	font-size: 25px;
+  font-weight: 600;
+  color: #000;
+	text-decoration: none;
+}
+
+.menu  {
+	display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menu a {
+	font-size: 22px;
+  border-bottom: 2px solid transparent;
+  margin-left: 40px;
+  color: #000;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover {
+	border-bottom: 2px solid #f2c968;
+}
+
+main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .container-img {
+  max-width: 60%;
+  margin-right: 40px;
+}
+
+.container-text .title {
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.container-text .brayan{
+  font-weight: bold;
+  color: #F39C12;
+  font-style: normal;
+}
+
+.container-text p {
+  margin-bottom: 40px;
+  line-height: 36px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 30px;
+	border-radius: 100px;
+  margin-right: 10px;
+  text-decoration: none;
+  background: #f2f2f2;
+}
+
+.btn-link:hover,
+.btn-link.active {
+	color: #fff;
+	background: #5b4a9a;
+}
+
+.todoList{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  box-shadow: inset 0px 10px 60px 0px #26126e,
+              0px 10px 30px 0px #26126e;
+  margin: 70px 0;
+}
+
+.titleCreate{
+  text-align: center;
+}
+
+.inputTodo{
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: inset 0px 1px 3px 0px #5b4a9a,
+              0px 1px 3px 0px #5b4a9a;
+  padding-left: 15px;
+}
+
+.inputTodo::placeholder{
+  color: #333;
+}
+
+.inputTodo:focus{
+  border: none;
+}
+
+.containerButtons{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons{
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  background: #5b4a9a;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonUpdate{
+  width: 250px;
+}
+
+.buttons span{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.buttons .liquid{
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 200px;
+  height: 200px;
+  background-repeat: white;
+  transition: 0.5s;
+}
+
+.buttons .liquid::before,
+.buttons .liquid::after{
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-75%,-50%);
+}
+
+.buttons .liquid::before{
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 0.1);
+  animation: animate 5s linear infinite;
+}
+
+.buttons .liquid::after{
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+table {
+  background-color: #fff;
+	width: 80vw;
+  box-shadow: 0px 10px 60px 0px #7e7e80;
+  text-align: left;
+  line-height: 40px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 50px auto;
+  border-radius: .25rem;
+  padding: 35px;
+}
+
+th {
+  font-weight: 500;
+}
+
+thead tr .gomez {
+  border-bottom: 3px solid #ddd;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #f2f2f2;
+  cursor: default;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+
+
+.button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.edit:hover {
+  color: #0a79df;
+}
+
+.delete:hover {
+  color: #dc2a2a;
+}
+
+@keyframes animate{
+  0%{
+      transform: translate(-50%,-75%) rotate(0deg);
+  }100%{
+      transform: translate(-50%,-75%) rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 915px) {
+  main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main .container-img {
+    margin-bottom: 40px;
+  }
+  .container{
+    width: 500px;
+	  max-width: 500px;
+	  margin: 40px auto;
+	  padding: 40px;
+  }
+}

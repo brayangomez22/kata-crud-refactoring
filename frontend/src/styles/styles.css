@@ -250,21 +250,28 @@ tbody td {
 
 
 .button {
-  color: #aaa;
+  color: #fff;
   cursor: pointer;
   vertical-align: middle;
   margin-top: -4px;
   padding: 10px;
   border: none;
   outline: none;
+  border-radius: 4px;
+  transition: 0.2s ease;
 }
 
-.edit:hover {
-  color: #0a79df;
+.edit {
+  background: #0a79df;
 }
 
-.delete:hover {
-  color: #dc2a2a;
+.delete {
+  background: #dc2a2a;
+}
+
+.edit:hover,
+.delete:hover{
+  transform: scale(1.1);
 }
 
 @keyframes animate{

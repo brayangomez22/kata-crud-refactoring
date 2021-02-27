@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+import swal from 'sweetalert2';
 const HOST_API="http://localhost:8080/api";
-
 
 const List = (params) => {
     const Store=params.params;
@@ -17,15 +17,41 @@ const List = (params) => {
 
 
     const onDelete = (id) => {
-        fetch(HOST_API + "/" + id + "/todo", {
-            method: "DELETE"
-        }).then((list) => {
-            dispatch({ type: "delete-item", id })
+        swal.fire({
+            title: "¡OJO!",
+            text: "¿Estas seguro de eliminar este To-Do?",
+            icon: 'warning',
+            showCancelButton: true,
+            cancelButtonText: "Cancelar",
+            confirmButtonText: "Sí, eliminar",
+            confirmButtonColor: "#0a79df",
         })
+        .then(resultado => {
+            if (resultado.value) {
+                fetch(HOST_API + "/" + id + "/todo", {
+                    method: "DELETE"
+                }).then((list) => {
+                    dispatch({ type: "delete-item", id })
+                })
+            } 
+        });
     };
 
     const onEdit = (todo) => {
-        dispatch({ type: "edit-item", item: todo })
+        swal.fire({
+            title: "¡OJO!",
+            text: "¿Estas seguro de editar este To-Do?",
+            icon: 'warning',
+            showCancelButton: true,
+            cancelButtonText: "Cancelar",
+            confirmButtonText: "Sí, editar",
+            confirmButtonColor: "#0a79df",
+        })
+        .then(resultado => {
+            if (resultado.value) {
+                dispatch({ type: "edit-item", item: todo })
+            } 
+        });
     };
 
     const onChange = (event, todo) => {

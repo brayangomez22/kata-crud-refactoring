@@ -262,11 +262,11 @@ tbody td {
 }
 
 .edit {
-  background: #0a79df;
+  background: #dc2a2a;
 }
 
 .delete {
-  background: #dc2a2a;
+  background: #0a79df;
 }
 
 .edit:hover,

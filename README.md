@@ -5,4 +5,6 @@
 ![preview web site.](https://github.com/JacoboGarcesO/KATA_REFACTORIZANDO_CRUD/blob/main/frontend/src/img/preview1.png)
 ![preview web site.](https://github.com/JacoboGarcesO/KATA_REFACTORIZANDO_CRUD/blob/main/frontend/src/img/preview2.png)
 ![preview web site.](https://github.com/JacoboGarcesO/KATA_REFACTORIZANDO_CRUD/blob/main/frontend/src/img/preview3.png)
-![preview web site.](https://github.com/JacoboGarcesO/KATA_REFACTORIZANDO_CRUD/blob/main/frontend/src/img/preview4.png)
+
+> Preview de la BD 
+![preview web site.](https://github.com/JacoboGarcesO/KATA_REFACTORIZANDO_CRUD/blob/main/frontend/src/img/bd.jpg)

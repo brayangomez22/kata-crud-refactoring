@@ -2,7 +2,7 @@ import React from 'react';
 import Brayan from '../img/brayan.jpg';
 import Jacobo from '../img/jacobo.jpg';
 
-const Header = () => {
+const HeaderHome = () => {
     return (
         <header>
             <span className="logo">To-Do List</span>
@@ -17,4 +17,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default HeaderHome;

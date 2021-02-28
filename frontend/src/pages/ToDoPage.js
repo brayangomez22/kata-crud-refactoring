@@ -1,23 +1,13 @@
-import React, { useReducer, createContext } from 'react';
+import React from 'react';
 import Form from '../components/Form';
 import List from '../components/List';
-import reducer from '../reducer/reducer';
-import { Link } from 'react-router-dom';  
-
-const initialState = { todo: { list: [], item: {} } };
-
-const Store = createContext(initialState);
-
-const StoreProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    return <Store.Provider value={{ state, dispatch }}>
-        {children}
-    </Store.Provider>
-}
+import StoreProvider from '../components/StoreProvider';
+import TittleTodo from '../components/TittleTodo';
+import {Store} from '../context/context';
 
 function ToDoPage() {
     return <StoreProvider>
-        <h3 className="todoList"><Link to="/" className="btn-link">Home</Link>  / To-Do List</h3>
+        <TittleTodo/>
         <Form params={Store} />
         <List params={Store} />
     </StoreProvider>

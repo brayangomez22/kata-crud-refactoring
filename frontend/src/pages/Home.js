@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
+import HeaderHome from '../components/HeaderHome';
 import BodyHome from '../components/BodyHome';
 
 const Home = () => {
     return (
         <div className="container">
-            <Header />
+            <HeaderHome />
             <BodyHome />
         </div>
     );
